@@ -1,17 +1,48 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inter, Poppins, Montserrat, PT_Serif } from 'next/font/google'
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
+const inter = Inter({
+  weight: ['400', '700'], 
+  subsets: ['latin'],
+  variable: '--font-inter',
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const montserrat = Montserrat({
+  weight: ['400','500', '600', '700', ],
+  style: ['normal'],
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  
+})
+
+const poppins = Poppins({
+  weight: ['400','500', '600', '700' ],
+  style: ['normal'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+})
+
+const ptSerif = PT_Serif({
+  weight: ['400', '700'], 
+  subsets: ['latin'],
+  variable: '--font-pt-serif',
 });
+
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,10 +56,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${inter.variable} ${poppins.variable} ${ptSerif.variable} ${montserrat.variable}`}>
+        <Header/>
+          {children}
+        <Footer/>
       </body>
     </html>
   );

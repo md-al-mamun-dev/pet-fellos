@@ -1,0 +1,10 @@
+
+.pet_property_list > li::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background: var(--clr-slate-300);
+    left: 0;
+    bottom: -8px;
+  }
