@@ -5,7 +5,7 @@ import ScrollOperation from './ScrollOperation'
 export default function ReadyToAdopt() {
   return (
     <div className="z-30 mt-28 relative">
-        <h2 className="text-slate-600 text-6xl font-semibold w-max mx-auto">Ready To Adopt</h2>
+        <h2 className="section-title-1">Ready To Adopt</h2>
         <FilterMenu/>
         {/* hide-scrollbar */}
 

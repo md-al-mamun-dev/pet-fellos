@@ -5,7 +5,7 @@ import BottomSection from './BottomSection'
 export default function Hero() {
   return (
     <div className="w-full overflow-hidden">
-      <div className="relative max-w-screen-2xl mx-auto px-14">
+      <div className="container-section relative">
         <Title/>
         <div className=" h-[660px] relative ">
           <BackgroundImage/>

@@ -7,7 +7,7 @@ import social_youtube from '@/public/icons/social_youtube.svg'
 
 export default function Footer() {
   return (
-    <footer className="text-gray-900 bg-gray-100 py-16 px-14">
+    <footer className="text-gray-900 bg-blue-50 py-16 px-14">
         <form className="flex items-center gap-x-9 w-max mx-auto mb-20">
             <h2 className="font-medium text-base">
                 Newsletter

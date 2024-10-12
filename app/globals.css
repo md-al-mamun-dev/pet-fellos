@@ -13,17 +13,11 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --clr-primary: #F33F81;
-
-    
+    --clr-primary: #F33F81;    
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  /* font-family: Arial, Helvetica, sans-serif; */
-}
+
 
 .font-sans-serif {
   font-family: var(--font-inter), sans-serif;
@@ -41,6 +35,12 @@ body {
   font-family: var(--font-pt-serif), serif;
 }
 
+body {
+  @apply font-poppins;
+  color: var(--foreground);
+  background: var(--background);
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
 
 .bg-primary{
   background: var(--clr-primary);
@@ -48,29 +48,100 @@ body {
 .text-primary{
   color: var(--clr-primary);
 }
-.border-primary{
+/* .border-primary{
   border: 1px solid #F33F81;
-}
+} */
+
+
+
+/* utilities */
 .absolute-center{
   @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
 }
 .absolute-v-center{
   @apply absolute top-1/2 transform -translate-y-1/2
 }
+
 .absolute-h-center{
   @apply absolute left-1/2 transform -translate-x-1/2 
 }
+.absolute-x-center{
+  @apply absolute-h-center
+}
+.absolute-y-center{
+  @apply absolute-v-center
+}
 
 
+/* Components */
+.container-section{
+  @apply max-w-screen-2xl mx-auto px-14
+}
 
 
-
+/* Buttons */
 .btn-primary{
-  @apply bg-primary font-poppins rounded-lg text-white font-medium text-base px-10 py-4;
+  @apply bg-primary rounded-lg text-white font-medium text-base px-10 py-4;
 }
 .btn-secondary{
-  @apply text-primary font-poppins rounded-lg py-4 px-10 font-medium border border-primary
+  @apply text-primary  rounded-lg py-4 px-10 font-medium border border-primary
 }
+
+
+
+
+/* Titles */
+.section-title{
+  @apply  font-semibold text-slate-600;
+}
+.section-title-1{
+  @apply section-title text-6xl text-center;
+}
+.section-title-2{
+  @apply text-slate-600 text-3xl font-semibold leading-9.5;
+}
+.section-title-3{
+  @apply text-slate-700 font-semibold text-2xl leading-7.5;
+}
+
+.section-title-4{
+  @apply text-[40px] text-slate-600 font-bold leading-[48px];
+}
+
+.search-filter-title{
+  @apply text-base font-normal text-slate-700 leading-6;
+}
+
+
+.underline-slate-400::after{
+  @apply  absolute w-full h-px bottom-0 bg-slate-400;
+  content: " ";
+}
+
+
+/* Card - pet card */
+/* =============== */
+.pet-card-title{
+  @apply text-2xl font-semibold leading-7.5 text-slate-700;
+}
+.pet-card-txt{
+  @apply text-base font-normal text-slate-400 leading-6;
+}
+.pet-card-btn{
+  @apply text-primary text-base font-medium leading-6 w-full rounded-lg  border border-primary py-2.5
+}
+.pet-card-favourit-btn{
+  @apply rounded-full border border-primary p-2.5 aspect-square;
+}
+.pet-card-favourit-btn > img{
+  @apply min-h-5 min-w-5
+}
+
+/* Pet History Card */
+.pet-history-card-title{
+  @apply mx-auto text-slate-600 text-xl font-semibold leading-6.5 text-center max-w-44 ;
+}
+
 .filter-active{
   background: var(--clr-primary);
   color: white;
@@ -78,13 +149,13 @@ body {
 
 
 
-/* Hide scrollbar  */
+
+/* scrollbar  */
 /* For Internet Explorer and Edge */
 .hide-scrollbar {
   -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
   scrollbar-width: none;     /* Hide scrollbar in Firefox */
 }
-
 .hide-scrollbar::-webkit-scrollbar {
   display: none;  /* Hide scrollbar in Webkit browsers (Chrome, Safari) */
 }

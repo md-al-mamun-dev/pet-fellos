@@ -3,7 +3,7 @@ import logo from '@/public/logo.png'
 
 export default function Header() {
   return (
-    <div className=" max-w-screen-2xl mx-auto px-14 py-6 flex justify-between">
+    <div className="container-section py-6 flex justify-between">
         <Image width={212} height={76} src={logo} alt="logo"/>
         <ul className="flex items-center gap-14">
             <li className="text-gray-900 font-medium text-base">Pet Food</li>

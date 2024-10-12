@@ -3,7 +3,7 @@ import styles from './index.module.css'
 
 export default function CardItem() {
   return (
-    <div className="py-10 rounded-lg px-8 bg-sky-100 min-w-[923px] flex gap-x-10 text-base font-normal">
+    <div className="py-10 rounded-lg px-8 bg-blue-50 min-w-[923px] flex gap-x-10 text-base font-normal">
         <Image 
           src="/images/c368a1db33579eba63620b0ca5a2f827.jpeg"
           className="object-cover rounded-lg w-[532px] h-[352px]" 
